@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <script src="globals.js"> </script>
+    <script src="image_processor_table.js"> </script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        td,
+        th {
+            border: none;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<center>
+    <table style="border: none;">
+        <tr>
+            <td>
+                <img src="images/home.jpg" onclick="open_page('allies.html')">
+            </td>
+            <td>
+                <img src="images/logo.png">
+            </td>
+        </tr>
+    </table>
+</center>
+
+
+<p>
+    <center>
+        Select your search type<p>
+            Choose whether you want an exact match or<br>
+            discover similar images based on visual similarity
+        <p>
+        <form>
+            <input id="exact_match" type="radio" id="radio1" name="match_strategy" value="" checked="checked"
+                onclick="hideMaxImgSelect();">
+            <label for="exact_match">Exact match</label>
+
+            <input id="similar_match" type="radio" id="radio2" name="match_strategy" value=""
+                onclick="showMaxImgSelect();">
+            <label for="similar_match">Similar images</label><br>
+
+            <p>
+
+            <div id="myMaxImageSelect" style="display:none">
+                <label for="myMaxImageSelectId">Max images</label>
+                <select id="myMaxImageSelectId" name="options" size="1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9" selected>9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p>
+
+
+                <button onclick="searchImages()" type="button">Search</button>
+
+
+        </form>
+    </center>
+    <!----Dynamic content --->
+<div id="zoom-container"></div>
+
+<div id="table-container"></div>
+
+</body>
+
+</html>

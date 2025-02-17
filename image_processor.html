@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="globals.js"> </script>
+    <script src="allies_main.js"> </script>
+    <script src="image_processor.js"> </script>
+</head>
+
+<body onload="onLoadFunction()">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        td,
+        th {
+            border: none;
+            padding: 10px;
+        }
+    </style>
+
+<center> <table style ="border: none;">
+<tr>
+<td>
+<img src="images/home.jpg" onclick="open_page('allies.html')">
+</td>
+<td>
+<img src="images/logo.png"> 
+</td>
+</tr>
+</table>
+</center>
+    <p>
+
+        <center>
+            <center> <img src="images/upload.jpg"> </center>
+            <p>
+            <h3>Select Images to Upload</h3>
+            <input type="file" id="fileInput" multiple>
+            <button onclick="uploadImages()">Upload & Submit</button>
+        </center>
+
+</body>
+
+</html>
