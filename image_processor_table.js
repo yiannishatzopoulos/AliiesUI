@@ -121,6 +121,10 @@ function buildTableRow(sourceimgbase64, similarimgs, exactsearch) {
         }
 
         for (let i = 0; i < n; i++) {
+			
+			if (similarimgs[i].score < 0.9) {
+				continue;
+			}
 
             let imgurl = alliesBaseURL() + "images/" +
                 similarimgs[i].id + ".jpg";
